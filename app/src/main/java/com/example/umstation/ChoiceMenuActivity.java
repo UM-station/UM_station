@@ -55,7 +55,7 @@ public class ChoiceMenuActivity extends AppCompatActivity {
         button_UmRetrun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChoiceMenuActivity.this, ChocieUmActivity.class);
+                Intent intent = new Intent(ChoiceMenuActivity.this, ChoiceUmActivity.class);
                 intent.putExtra("StationQR", StationQR);
                 intent.putExtra("ChoiceMenu", "return");
                 intent.putExtra("UserID", UserID);

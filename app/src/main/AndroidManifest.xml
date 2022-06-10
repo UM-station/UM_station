@@ -44,7 +44,7 @@
             android:name=".StationQRActivity2"
             android:exported="false" />
         <activity
-            android:name=".ChocieUmActivity"
+            android:name=".ChoiceUmActivity"
             android:exported="false" />
         <activity
             android:name=".RentQRActivity"
