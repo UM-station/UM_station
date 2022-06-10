@@ -79,17 +79,6 @@ public class StationLocationActivity extends FragmentActivity implements OnMapRe
 
                 MarkerOptions ummarker = new MarkerOptions(); //우산 마커
 
-//                // 선문대학교에 마커찍고 카메라 시점 이동
-//                LatLng sunmoonUniv = new LatLng(36.80104098469985, 127.07573698072187);
-//
-//                ummarker.position(sunmoonUniv);
-//                ummarker.title(); //장소 명
-//                ummarker.snippet("즐거워~"); //설명
-//
-//                ummarker.icon(BitmapDescriptorFactory.fromBitmap(smallMaker));
-//                mMap.addMarker(ummarker); //마커 찍기
-//                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sunmoonUniv, 17)); //줌레벨 설정, 카메라 이동 --> 추후에 카메라 시점 내 위치로 변경
-
                 List<StationInfoData> resource = response.body();
 
                 //리스트 생성

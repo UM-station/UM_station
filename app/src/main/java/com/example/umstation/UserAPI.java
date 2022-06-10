@@ -10,7 +10,4 @@ public interface UserAPI {
     @POST("/test/doIDstate")
     Call<List<UserData>> userData(@Body UserData body);
 
-//    //사용자명
-//    @GET("/test/doIDstate/{user_name}")
-//    Call<UserData> getData(@Query("user_name") String user_name, @Query("user_rental") String user_rental);
 }
