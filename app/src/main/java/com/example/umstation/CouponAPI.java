@@ -8,6 +8,5 @@ import retrofit2.http.POST;
 
 public interface CouponAPI {
     @POST("/test/doCoupID")
-    Call<List<CouponData>> couponData(@Body CouponData body
-    );
+    Call<List<CouponData>> couponData(@Body CouponData body);
 }

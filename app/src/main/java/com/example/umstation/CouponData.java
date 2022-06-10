@@ -1,12 +1,9 @@
 package com.example.umstation;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
 
 public class CouponData {
-
     @SerializedName("user_id")
     private String user_id;
     public CouponData(String UserID) {
