@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -107,33 +109,34 @@ public class MainActivity extends AppCompatActivity {
                 requestQueue = Volley.newRequestQueue(getApplicationContext());
             }
 
-            //레트로핏 객체 생성
+            //레트로핏 객체
             Retrofit.Builder builder = new Retrofit.Builder()
                     .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
                     .addConverterFactory(GsonConverterFactory.create());
             Retrofit retrofit = builder.build();
-            UserAPI UserAPI = retrofit.create(UserAPI.class);
+            UserAPI userAPI = retrofit.create(UserAPI.class);
             String ReadUserID = UserID;
-            UserData usersPost = new UserData(
+            UserData userData = new UserData(
                     ReadUserID
             );
-            Call<List<UserData>> call = UserAPI.usersData(usersPost);
+
+            Call<List<UserData>> call = userAPI.userData(userData);
             call.enqueue(new Callback<List<UserData>>() {
                 @Override
                 public void onResponse(Call<List<UserData>> call, retrofit2.Response<List<UserData>> response) {
-                    if (response.isSuccessful()) {
-
+                    if(response.isSuccessful()) {
+                        System.out.println("main***********************");
                         List<UserData> resource = response.body();
-                        System.out.println("main**************************************");
 
+                        //리스트 생성
                         ArrayList<String> arrayUserName = new ArrayList<>();
                         ArrayList<String> arrayUserRental = new ArrayList<>();
 
-                        //각 정보 리스트에 저장
-                        for(UserData re : resource){
+                        for(UserData re : resource) {
                             arrayUserName.add(re.user_name());
                             arrayUserRental.add(re.user_rental());
                         }
+
                         name = arrayUserName.get(0);
                         rental = arrayUserRental.get(0);
 
@@ -144,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         text_rentaldate = findViewById(R.id.text_rentaldate);
                         text_state = findViewById(R.id.text_state);
 
-                        if (rental == "") {
+                        if (rental == null) {
                             text_UserName.setText(name);
                             text_rentaldate.setText("-");
                             text_state.setText("-");
@@ -158,9 +161,65 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<List<UserData>> call, Throwable t) {
-                    System.out.println("main####################################");
+
                 }
             });
+
+
+//            //레트로핏 객체 생성
+//            Retrofit.Builder builder = new Retrofit.Builder()
+//                    .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+//                    .addConverterFactory(GsonConverterFactory.create());
+//            Retrofit retrofit = builder.build();
+//            UserAPI userAPI = retrofit.create(UserAPI.class);
+//            String ReadUserID = UserID;
+//            UserData userData = new UserData(
+//                    ReadUserID
+//            );
+//            Call<List<UserData>> call = userAPI.userData(userData);
+//            call.enqueue(new Callback<List<UserData>>() {
+//                @Override
+//                public void onResponse(Call<List<UserData>> call, retrofit2.Response<List<UserData>> response) {
+//                    if (response.isSuccessful()) {
+//
+//                        List<UserData> resource = response.body();
+//                        System.out.println("main**************************************");
+//
+//                        ArrayList<String> arrayUserName = new ArrayList<>();
+//                        ArrayList<String> arrayUserRental = new ArrayList<>();
+//
+//                        //각 정보 리스트에 저장
+//                        for(UserData re : resource){
+//                            arrayUserName.add(re.user_name());
+//                            arrayUserRental.add(re.user_rental());
+//                        }
+//                        name = arrayUserName.get(0);
+//                        rental = arrayUserRental.get(0);
+//
+//                        System.out.println(name);
+//                        System.out.println(rental);
+//
+//                        text_UserName = findViewById(R.id.text_UserName);
+//                        text_rentaldate = findViewById(R.id.text_rentaldate);
+//                        text_state = findViewById(R.id.text_state);
+//
+//                        if (rental == "") {
+//                            text_UserName.setText(name);
+//                            text_rentaldate.setText("-");
+//                            text_state.setText("-");
+//                        } else {
+//                            text_UserName.setText(name);
+//                            text_rentaldate.setText(rental);
+//                            text_state.setText("대여 중");
+//                        }
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<List<UserData>> call, Throwable t) {
+//                    System.out.println("main####################################");
+//                }
+//            });
 
     }
     //날씨 정보 불러오기
