@@ -12,8 +12,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface LoginAPI {
-
     @POST("/test/doLOGIN")
-    Call<Check> LoginData( @Body Check body
+    Call<Check> LoginData(@Body Check body
     );
 }
