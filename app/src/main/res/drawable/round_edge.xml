@@ -2,10 +2,14 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding = "10dp"
     android:shape="rectangle">
+
+    //색 채우기
     <solid android:color="#FFFFFF"/>
 
+    //테두리 두께, 색
     <stroke android:width="2dp" android:color="#285600" />
 
+    //코너 각도값
     <corners
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
