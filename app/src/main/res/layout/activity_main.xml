@@ -33,6 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="161dp"
         android:layout_height="197dp"
         android:layout_marginStart="50dp"
@@ -147,10 +148,9 @@
         android:id="@+id/text_rentaldate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="16dp"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/text_date"
         app:layout_constraintTop_toBottomOf="@+id/text_rental" />
 
     <TextView
@@ -161,5 +161,15 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/text_rental"
         app:layout_constraintTop_toBottomOf="@+id/text_UserName" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_rental" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
