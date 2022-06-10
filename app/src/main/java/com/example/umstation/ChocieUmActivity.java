@@ -37,7 +37,7 @@ public class ChocieUmActivity extends AppCompatActivity {
         button_Wrong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChocieUmActivity.this, ReturnWorngQRActivity.class);
+                Intent intent = new Intent(ChocieUmActivity.this, ReturnWrongQRActivity.class);
                 intent.putExtra("StationNum", StationQR);
                 intent.putExtra("State", "wrongReturn");
                 intent.putExtra("UserID", UserID);

@@ -72,11 +72,26 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<Check> call, Response<Check> response) {
                         if(response.isSuccessful()) {
 
-                            //로그인 상태코드 리턴
+                            //상태코드
+                            Check resource = response.body();
+                            int type = Integer.parseInt(resource.response_type());
 
+                            switch (type) {
+                                case 401 : //ID 중복 오류
 
-                            showButton1();
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    break;
+
+                                case 402 : //ID 존재하지 않음 오류
+
+                                    break;
+
+                                case 201 : //로그인 성공공
+
+                                    break;
+                            }
+
+                           showButton1();
+                           Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.putExtra("UserID", inputid);
                             startActivity(intent);
                         }

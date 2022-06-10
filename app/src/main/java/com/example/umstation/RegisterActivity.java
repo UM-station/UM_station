@@ -69,6 +69,14 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Post> call, Response<Post> response) {
                         if(response.isSuccessful()){
+
+                            //상태코드
+                            Post resource = response.body();
+                            int type = Integer.parseInt(resource.response_type());
+                            if (type == 400) { //ID 중복 오류
+
+                            }
+
                             showButtonAlertDialog2();
                             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intent);

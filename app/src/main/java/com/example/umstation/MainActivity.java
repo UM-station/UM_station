@@ -260,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
                         case "broken clouds" :
                             weatherView.setText("흐림");
                             imgWeather.setImageResource(R.drawable.broken_clouds);
+                            break;
 
                         case "shower rain" :
                         case "light rain" :
@@ -272,14 +273,17 @@ public class MainActivity extends AppCompatActivity {
                         case "snow" :
                             weatherView.setText("눈");
                             imgWeather.setImageResource(R.drawable.snow);
+                            break;
 
                         case "snow_rain" :
                             weatherView.setText("눈비");
                             imgWeather.setImageResource(R.drawable.snow_rain);
+                            break;
 
                         case "clear sky" :
                             weatherView.setText("맑음");
                             imgWeather.setImageResource(R.drawable.sunny);
+                            break;
                     }
 
                     //기온 키값 받기
