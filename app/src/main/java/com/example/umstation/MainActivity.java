@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                             text_rentaldate.setText("-");
                             text_state.setText("-");
                         } else {
+                            text_UserName.setText(name);
                             text_rentaldate.setText(rental);
                             text_state.setText("대여 중");
                         }
