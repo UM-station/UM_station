@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ChocieUmActivity extends AppCompatActivity {
+public class ChoiceUmActivity extends AppCompatActivity {
     private Button button_Normal;
     private Button button_Wrong;
 
@@ -25,7 +25,7 @@ public class ChocieUmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //정상적인 우산 정보
-                Intent intent = new Intent(ChocieUmActivity.this, ReturnNormalQRActivity.class);
+                Intent intent = new Intent(ChoiceUmActivity.this, ReturnNormalQRActivity.class);
                 intent.putExtra("StationNum", StationQR);
                 intent.putExtra("State", "normalReturn");
                 intent.putExtra("UserID", UserID);
@@ -37,7 +37,7 @@ public class ChocieUmActivity extends AppCompatActivity {
         button_Wrong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChocieUmActivity.this, ReturnWrongQRActivity.class);
+                Intent intent = new Intent(ChoiceUmActivity.this, ReturnWrongQRActivity.class);
                 intent.putExtra("StationNum", StationQR);
                 intent.putExtra("State", "wrongReturn");
                 intent.putExtra("UserID", UserID);
