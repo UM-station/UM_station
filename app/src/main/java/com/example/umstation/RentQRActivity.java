@@ -83,30 +83,9 @@ public class RentQRActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<PostStation> call, Response<PostStation> response) {
                             if(response.isSuccessful()){
-
-                                //상태코드
-                                PostStation resource = response.body();
-                                int type = Integer.parseInt(resource.response_type());
-
-                                switch (type) {
-                                    case 404 : //우산 ID 존재하지 않음 오류
-
-                                        break;
-
-                                    case 405 : //대여 우산 없음
-
-                                        break;
-
-                                    case 206 : //Rent 이외 태그 삽입시 오류
-
-                                        break;
-
-                                    case 203 : //대여 성공
-                                        Intent intent = new Intent(RentQRActivity.this, MainActivity.class);
-                                        intent.putExtra("UserID", UserID);
-                                        startActivity(intent);
-                                        break;
-                                }
+                                Intent intent = new Intent(RentQRActivity.this, MainActivity.class);
+                                intent.putExtra("UserID", UserID);
+                                startActivity(intent);
                             }
                         }
                         @Override

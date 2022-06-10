@@ -82,29 +82,9 @@ public class ReturnWrongQRActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<PostStation> call, Response<PostStation> response) {
                             if(response.isSuccessful()){
-                                //상태코드
-                                PostStation resource = response.body();
-                                int type = Integer.parseInt(resource.response_type());
-
-                                switch (type) {
-                                    case 404 : //우산 반납 안됨
-
-                                        break;
-
-                                    case 407 : //스테이션에 우산 적재할 자리 없음
-
-                                        break;
-
-                                    case 408 : //Return 이외 태그 삽입 시 오류
-
-                                        break;
-
-                                    case 204 : //반납 성공
-                                        Intent intent = new Intent(ReturnWrongQRActivity.this, MainActivity.class);
-                                        intent.putExtra("UserID", UserID);
-                                        startActivity(intent);
-                                        break;
-                                }
+                                Intent intent = new Intent(ReturnWrongQRActivity.this, MainActivity.class);
+                                intent.putExtra("UserID", UserID);
+                                startActivity(intent);
                             }
                         }
                         @Override
