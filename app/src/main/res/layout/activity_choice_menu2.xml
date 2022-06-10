@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoiceMenuActivity">
+
+    <Button
+        android:id="@+id/button_UmRent"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/round_edge"
+        android:fontFamily="@font/gmarket_sans_ttf_medium"
+        android:text="우산 대여하기"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_UmReturn"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_edge"
+        android:fontFamily="@font/gmarket_sans_ttf_medium"
+        android:text="우산 반납하기"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_UmRent" />
+
+    <Button
+        android:id="@+id/button_OldUm"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_edge"
+        android:fontFamily="@font/gmarket_sans_ttf_medium"
+        android:text="폐우산 기부하기"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_UmReturn" />
+
+    <ImageButton
+        android:id="@+id/button_Back"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="664dp"
+        android:background="@drawable/round_edge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="379dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_OldUm"
+        app:srcCompat="@drawable/title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

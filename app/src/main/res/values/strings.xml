@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Umstation</string>
+    <string name="base_URL">https://4c76-203-230-13-2.jp.ngrok.io</string>
+</resources>
