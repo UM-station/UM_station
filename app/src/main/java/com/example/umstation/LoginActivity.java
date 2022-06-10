@@ -71,6 +71,10 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Check> call, Response<Check> response) {
                         if(response.isSuccessful()) {
+
+                            //로그인 상태코드 리턴
+
+
                             showButton1();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.putExtra("UserID", inputid);
