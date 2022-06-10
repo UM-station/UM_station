@@ -92,5 +92,4 @@ public class StationQRActivity2 extends AppCompatActivity {
         builder.setMessage("스테이션의 QR을 인식해주세요");
         builder.show();
     }
-
 }

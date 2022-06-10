@@ -74,6 +74,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             //상태코드
                             Check resource = response.body();
+                            System.out.println(resource.response_type());
+
                             int type = Integer.parseInt(resource.response_type());
 
                             switch (type) {
@@ -85,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     break;
 
-                                case 201 : //로그인 성공공
+                                case 201 : //로그인 성공
 
                                     break;
                             }

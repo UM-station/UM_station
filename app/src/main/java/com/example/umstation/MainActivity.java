@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     TextView cityView;
     TextView weatherView;
     TextView tempView;
+    TextView text_date;
     ImageView imgWeather;
 
     //대여상태 확인
@@ -146,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         text_UserName = findViewById(R.id.text_UserName);
                         text_rentaldate = findViewById(R.id.text_rentaldate);
                         text_state = findViewById(R.id.text_state);
+                        text_date = findViewById(R.id.text_date);
 
                         if (rental == null) {
                             text_UserName.setText(name);
@@ -153,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
                             text_state.setText("-");
                         } else {
                             text_UserName.setText(name);
+                            text_date.setText("대여 날짜 : ");
                             text_rentaldate.setText(rental);
                             text_state.setText("대여 중");
                         }
