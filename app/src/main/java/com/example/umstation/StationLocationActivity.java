@@ -132,6 +132,8 @@ public class StationLocationActivity extends FragmentActivity implements OnMapRe
                     ummarker.icon(BitmapDescriptorFactory.fromBitmap(smallMaker));
                     mMap.addMarker(ummarker); //마커 찍기
                 }
+                LatLng sunmoonUniv = new LatLng(36.80104098469980, 127.07573698072177);
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sunmoonUniv, 17));
             }
 
             //통신 실패 시
