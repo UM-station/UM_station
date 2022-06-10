@@ -35,7 +35,7 @@
     <LinearLayout
         android:layout_width="161dp"
         android:layout_height="197dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="160dp"
         android:background="@drawable/round_edge"
         android:orientation="vertical"
@@ -111,7 +111,7 @@
         android:id="@+id/text_rental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="16dp"
         android:text="대여상태 : "
         android:textSize="20sp"
@@ -122,7 +122,7 @@
         android:id="@+id/text_UserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="165dp"
         android:text="홍길동"
         android:textColor="@color/black"
@@ -147,10 +147,11 @@
         android:id="@+id/text_rentaldate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="16dp"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/text_rental"
-        tools:layout_editor_absoluteX="220dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_rental" />
 
     <TextView
         android:id="@+id/text_state"

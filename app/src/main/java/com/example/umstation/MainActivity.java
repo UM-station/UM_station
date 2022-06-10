@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
             //레트로핏 객체 생성
             Retrofit.Builder builder = new Retrofit.Builder()
-                    .baseUrl("https://f6af-203-230-13-2.jp.ngrok.io")
+                    .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
                     .addConverterFactory(GsonConverterFactory.create());
             Retrofit retrofit = builder.build();
             UserAPI UserAPI = retrofit.create(UserAPI.class);
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
 
                         List<UserData> resource = response.body();
-                        System.out.println("coupon**************************************");
+                        System.out.println("main**************************************");
 
                         ArrayList<String> arrayUserName = new ArrayList<>();
                         ArrayList<String> arrayUserRental = new ArrayList<>();
