@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
     TextView cityView;
     TextView weatherView;
     TextView tempView;
-    TextView text_date;
     ImageView imgWeather;
 
     //대여상태 확인
     TextView text_UserName;
     TextView text_state;
     TextView text_rentaldate;
+    TextView text_date;
 
     String name;
     String rental;
@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             String UserID = getIntent().getStringExtra("UserID");
-
+            name = getIntent().getStringExtra("name");
+            rental = getIntent().getStringExtra("rental");
 
             //[Station QR]버튼 클릭 -> QR 인식 화면
             button_stationQR = findViewById(R.id.button_stationQR);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
             //레트로핏 객체
             Retrofit.Builder builder = new Retrofit.Builder()
-                    .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                    .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                     .addConverterFactory(GsonConverterFactory.create());
             Retrofit retrofit = builder.build();
             UserAPI userAPI = retrofit.create(UserAPI.class);
@@ -126,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<List<UserData>> call, retrofit2.Response<List<UserData>> response) {
                     if(response.isSuccessful()) {
-                        System.out.println("main***********************");
                         List<UserData> resource = response.body();
 
                         //리스트 생성

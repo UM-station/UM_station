@@ -15,6 +15,9 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,7 +32,6 @@ public class RentQRActivity extends AppCompatActivity {
     private Button Rent;
     int flag = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class RentQRActivity extends AppCompatActivity {
 
         //레트로핏 객체 생성
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         RentAPI stationAPI = retrofit.create(RentAPI.class);

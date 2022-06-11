@@ -55,7 +55,7 @@ public class StationLocationActivity extends FragmentActivity implements OnMapRe
     public void onMapReady(GoogleMap googleMap) {
         //레트로핏 객체
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         StationInfoAPI stationInfoAPI = retrofit.create(StationInfoAPI.class);

@@ -37,7 +37,7 @@ public class PointActivity extends AppCompatActivity {
 
         //레드로핏 객체
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         CouponAPI couponAPI = retrofit.create(CouponAPI.class);
@@ -51,7 +51,6 @@ public class PointActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<CouponData>> call, retrofit2.Response<List<CouponData>> response) {
                 if(response.isSuccessful()) {
-                    System.out.println("coupon**********************");
                     List<CouponData> resource = response.body();
 
                     //리스트 생성
@@ -82,7 +81,6 @@ public class PointActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<CouponData>> call, Throwable t) {
-                System.out.println("coupon#####################");
             }
         });
         }

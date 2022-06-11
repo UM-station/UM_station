@@ -39,7 +39,7 @@ public class ReturnNormalQRActivity extends AppCompatActivity {
         String UserID = getIntent().getStringExtra("UserID");
         //레트로핏 객체 생성
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         ReturnNormalAPI stationAPI = retrofit.create(ReturnNormalAPI.class);
