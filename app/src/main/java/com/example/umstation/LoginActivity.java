@@ -28,19 +28,17 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
 
         LoginAPI loginAPI = retrofit.create(LoginAPI.class);
 
 
-
         button_register = findViewById(R.id.button_register);
         button_login = findViewById(R.id.button_login);
         id = findViewById(R.id.et_id);
         pw = findViewById(R.id.et_pw);
-
 
 
         //[회원가입]버튼 클릭 -> 회원가입 화면
@@ -74,33 +72,32 @@ public class LoginActivity extends AppCompatActivity {
 
                             //상태코드
                             Check resource = response.body();
-                            System.out.println(resource.response_type());
+                            System.out.println("*************로그인" + resource.response_type());
 
                             int type = Integer.parseInt(resource.response_type());
 
                             switch (type) {
-                                case 401 : //ID 중복 오류
-
+                                case 401 : //ID-PW 정보 불일치
+                                    showButton3();
                                     break;
 
                                 case 402 : //ID 존재하지 않음 오류
-
+                                    showButton4();
                                     break;
 
                                 case 201 : //로그인 성공
-
+                                    showButton1();
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    intent.putExtra("UserID", inputid);
+                                    startActivity(intent);
                                     break;
                             }
-
-                           showButton1();
-                           Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.putExtra("UserID", inputid);
-                            startActivity(intent);
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<Check> call, Throwable t) { showButton2();}
+                    public void onFailure(Call<Check> call, Throwable t) {
+                        showButton2();}
                 });
             }
         });
@@ -121,6 +118,19 @@ public class LoginActivity extends AppCompatActivity {
         builder.show();
     }
 
+    void showButton3() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("UmStation");
+        builder.setMessage("아이디 또는 패스워드를 잘못 입력했습니다\n 다시 입력해주세요");
+        builder.show();
+    }
+
+    void showButton4() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("UmStation");
+        builder.setMessage("가입된 회원이 아닙니다");
+        builder.show();
+    }
 
 }
 

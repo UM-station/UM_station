@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //레트로핏 객체 생성
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://b6a8-27-117-234-165.jp.ngrok.io")
+                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
@@ -41,8 +41,6 @@ public class RegisterActivity extends AppCompatActivity {
         pwCheck = findViewById(R.id.et_RpwCheck);
         phone = findViewById(R.id.et_Rphone);
         birth = findViewById(R.id.et_RbirthDate);
-
-
 
 
         button_registerStart.setOnClickListener(v -> {
@@ -72,14 +70,16 @@ public class RegisterActivity extends AppCompatActivity {
 
                             //상태코드
                             Post resource = response.body();
+                            System.out.println("*************회원가입" + resource.response_type());
+
                             int type = Integer.parseInt(resource.response_type());
                             if (type == 400) { //ID 중복 오류
-
+                                showButtonAlertDialog3();
+                            } else if (type == 200) {
+                                showButtonAlertDialog2();
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                startActivity(intent);
                             }
-
-                            showButtonAlertDialog2();
-                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                            startActivity(intent);
                         }
                     }
                     @Override
@@ -106,6 +106,13 @@ public class RegisterActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("UmStation");
         builder.setMessage("회원가입이 성공적으로 완료되었습니다.");
+        builder.show();
+    }
+
+    void showButtonAlertDialog3() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("UmStation");
+        builder.setMessage("(ID 중복)ID를 다시 입력해주세요");
         builder.show();
     }
 }

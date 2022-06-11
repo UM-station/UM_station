@@ -19,18 +19,5 @@ public class Check {
     @SerializedName("response_type")
     private String response_type;
 
-    @Expose
-    @SerializedName("response_msg")
-    private String response_msg;
-
-    @Expose
-    @SerializedName("response_value")
-    private String response_value;
-
-
     public String response_type() { return response_type; }
-
-    public String response_msg() { return response_msg; }
-
-    public String response_value() { return response_value; }
 }
