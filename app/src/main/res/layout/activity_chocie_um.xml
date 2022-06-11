@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="18sp" />
+        tools:textSize="20sp" />
 
     <Button
         android:id="@+id/WrongUm"
@@ -39,5 +39,5 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NormalUm"
-        tools:textSize="18sp" />
+        tools:textSize="20sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,11 +44,11 @@
         android:layout_height="56dp"
         android:layout_marginTop="500dp"
         android:background="@drawable/round_edge2"
-        android:text="QR인식하기"
+        android:text="QR 인식하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="17sp" />
+        tools:textSize="20sp" />
 
     <Button
         android:id="@+id/button_Rent"
@@ -60,5 +60,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="17sp" />
+        tools:textSize="20sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

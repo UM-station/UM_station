@@ -14,7 +14,7 @@
         android:background="@drawable/round_edge"
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:text="우산 대여하기"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:background="@drawable/round_edge"
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:text="우산 반납하기"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_UmRent" />
@@ -41,7 +41,7 @@
         android:background="@drawable/round_edge"
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:text="폐우산 기부하기"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_UmReturn" />

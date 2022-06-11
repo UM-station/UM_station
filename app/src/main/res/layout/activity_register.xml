@@ -24,7 +24,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="이름"
         android:inputType="textPersonName"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="아이디"
         android:inputType="textPersonName"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/et_Rname"
         app:layout_constraintStart_toStartOf="@+id/et_Rname"
         app:layout_constraintTop_toBottomOf="@+id/et_Rname" />
@@ -53,7 +53,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="비밀번호"
         android:inputType="textPassword"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/et_Rid"
         app:layout_constraintStart_toStartOf="@+id/et_Rid"
         app:layout_constraintTop_toBottomOf="@+id/et_Rid" />
@@ -67,7 +67,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="비밀번호 확인"
         android:inputType="textPassword"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/et_Rpw"
         app:layout_constraintStart_toStartOf="@+id/et_Rpw"
         app:layout_constraintTop_toBottomOf="@+id/et_Rpw" />
@@ -81,7 +81,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="전화번호 ex)99186657"
         android:inputType="phone"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/et_RpwCheck"
         app:layout_constraintStart_toStartOf="@+id/et_RpwCheck"
         app:layout_constraintTop_toBottomOf="@+id/et_RpwCheck" />
@@ -95,7 +95,7 @@
         android:fontFamily="@font/gmarket_sans_ttf_medium"
         android:hint="생년월일 ex)970105"
         android:inputType="date"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/et_Rphone"
         app:layout_constraintStart_toStartOf="@+id/et_Rphone"
         app:layout_constraintTop_toBottomOf="@+id/et_Rphone" />

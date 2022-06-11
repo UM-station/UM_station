@@ -13,7 +13,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/round_edge2"
         android:text="Point 전환"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_stationQR" />
@@ -26,7 +26,7 @@
         android:background="@drawable/round_edge2"
         android:text="우산 Station찾기"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="161dp"
         android:layout_height="197dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="160dp"
         android:background="@drawable/round_edge"
         android:orientation="vertical"
@@ -72,8 +72,9 @@
         <TextView
             android:id="@+id/tempView"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
             android:text="20°C"
             android:textColor="@color/black"
             android:textSize="30sp"
@@ -84,7 +85,8 @@
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_marginLeft="15dp"
-            android:text="구름 많음" />
+            android:text="구름 많음"
+            tools:textSize="20sp" />
 
         <Button
             android:id="@+id/button"
@@ -93,7 +95,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/round_edge"
-            android:text="오늘의 날씨" />
+            android:text="오늘의 날씨"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -112,10 +115,10 @@
         android:id="@+id/text_rental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="16dp"
         android:text="대여상태 : "
-        android:textSize="20sp"
+        android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_UserName" />
 
@@ -123,11 +126,11 @@
         android:id="@+id/text_UserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="160dp"
         android:text="홍길동"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -139,7 +142,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/round_edge2"
         android:text="Station QR 인식"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_FindStation" />
@@ -149,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:textSize="13sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/text_date"
         app:layout_constraintTop_toBottomOf="@+id/text_rental" />
 
@@ -158,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textSize="20sp"
+        android:textSize="21sp"
         app:layout_constraintStart_toEndOf="@+id/text_rental"
         app:layout_constraintTop_toBottomOf="@+id/text_UserName" />
 
@@ -166,9 +169,9 @@
         android:id="@+id/text_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="4dp"
-        android:textSize="13sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_rental" />
 
