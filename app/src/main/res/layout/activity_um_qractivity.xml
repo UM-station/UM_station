@@ -25,7 +25,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="#000000"/>
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/text_UmCode"
@@ -36,7 +36,7 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:textColor="#000000"/>
+        android:textColor="#000000"/>
 
     <Button
         android:id="@+id/UmCamera"
@@ -45,10 +45,10 @@
         android:layout_marginTop="500dp"
         android:background="@drawable/round_edge2"
         android:text="QR 인식하기"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="20sp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_Rent"
@@ -57,8 +57,8 @@
         android:layout_marginTop="570dp"
         android:background="@drawable/round_edge2"
         android:text="Station 입구 열기"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="20sp" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

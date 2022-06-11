@@ -22,11 +22,11 @@
         android:layout_marginTop="250dp"
         android:background="@drawable/round_edge2"
         android:text="정상적인 대여우산"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="24sp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/WrongUm"
@@ -35,9 +35,9 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/round_edge2"
         android:text="고장난 대여우산"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NormalUm"
-        tools:textSize="24sp" />
+        app:layout_constraintTop_toBottomOf="@+id/NormalUm" />
 </androidx.constraintlayout.widget.ConstraintLayout>

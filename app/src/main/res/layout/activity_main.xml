@@ -86,7 +86,7 @@
             android:layout_height="32dp"
             android:layout_marginLeft="15dp"
             android:text="구름 많음"
-            tools:textSize="20sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button"

@@ -25,7 +25,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="#000000"/>
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/text_UmCode"
@@ -36,7 +36,7 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:textColor="#000000"/>
+        android:textColor="#000000"/>
 
     <Button
         android:id="@+id/UmCamera"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="20sp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/button_Rent"
@@ -60,5 +60,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textSize="20sp" />
+        android:textSize="24sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
