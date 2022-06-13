@@ -54,26 +54,26 @@ public class PointActivity extends AppCompatActivity {
                     List<CouponData> resource = response.body();
 
                     //리스트 생성
-                    ArrayList<String> arrayCPnum = new ArrayList<>();
+                    ArrayList<String> arrayCPprice = new ArrayList<>();
                     ArrayList<String> arrayCPdate = new ArrayList<>();
 
                     //각 정보 리스트에 저장
                     for(CouponData re : resource) {
-                        arrayCPnum.add(re.coupon_num());
+                        arrayCPprice.add(re.coupon_price());
                         arrayCPdate.add(re.coupon_date());
                     }
 
-                    System.out.println(arrayCPnum.get(0));
+                    System.out.println(arrayCPprice.get(0));
                     System.out.println(arrayCPdate.get(0));
 
                     //리스트 크기 측정을 위한 기준 생성
                     ArrayList arrayList = new ArrayList<>();
-                    arrayList.addAll(arrayCPnum);
+                    arrayList.addAll(arrayCPprice);
 
                     MyAdapter mMyAdapter = new MyAdapter();
 
                     for(int i = 0; i < arrayList.size(); i++) {
-                        mMyAdapter.addCoupon(ContextCompat.getDrawable(getApplicationContext(),R.drawable.coupon), arrayCPnum.get(i), arrayCPdate.get(i));
+                        mMyAdapter.addCoupon(ContextCompat.getDrawable(getApplicationContext(),R.drawable.coupon), arrayCPprice.get(i), arrayCPdate.get(i));
                     }
                     mListView.setAdapter(mMyAdapter);
                 }
