@@ -37,7 +37,7 @@ public class PointActivity extends AppCompatActivity {
 
         //레드로핏 객체
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://c7a9-203-230-13-2.jp.ngrok.io")
+                .baseUrl("https://912e-203-230-13-2.jp.ngrok.io")
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = builder.build();
         CouponAPI couponAPI = retrofit.create(CouponAPI.class);
