@@ -126,7 +126,6 @@ public class RentQRActivity extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-
     void showButtonAlertDialog2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("UmStation");
